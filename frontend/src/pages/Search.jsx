@@ -15,7 +15,7 @@ const Search = () => {
 
     const handleSearch=async(e)=>{
         try{
-            const result=await axios.get(`http://localhost:8000/api/user/search?keyword=${input}`,{
+            const result=await axios.get(`https://vybe-backend-p17f.onrender.com/api/user/search?keyword=${input}`,{
                 withCredentials:true
             })
             dispatch(setSearchData(result.data))
